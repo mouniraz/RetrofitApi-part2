@@ -15,6 +15,8 @@ Add Retrofit and Gson dependency to your gradle
 implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
 implementation("com.squareup.retrofit2:retrofit:2.9.0")
 implementation ("com.google.code.gson:gson:2.11.0")
+implementation ("com.squareup.retrofit2:converter-gson:2.9.0") // Replace with the latest version
+
 ```
 > __retrofit2-kotlinx-serialization-converter__: A converter for Retrofit to use Kotlinx Serialization.
 
@@ -205,4 +207,12 @@ class MainActivity : ComponentActivity() {
     }
 }
 ```
-
+# Step 8
+add Internet permission to your Manifest
+add permission to use http in the balise application 
+```xml
+<application
+ .....
+    android:usesCleartextTraffic="true">
+......
+```
